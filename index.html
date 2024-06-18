@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-fmP/ee33IKFg8Mdy5dga8fQqMpKez18WWx41YNB1afL5u8DJ2ta/T2i0v+ZSMG+ddKsmtoP5wLh45PUpz1clO6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+      <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+      <!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+      <script src="https://unpkg.com/scrollreveal"></script>
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Slash Portfolio</title>
+  
+    </head>
+    <body class="dark-mode">
+
+
+
+     
+
+        <div class="preloader">
+            <div class="scene">
+              <div class="forest">
+                <div class="tree tree1">
+                  <div class="branch branch-top"></div>
+                  <div class="branch branch-middle"></div>
+                </div>
+                <div class="tree tree2">
+                  <div class="branch branch-top"></div>
+                  <div class="branch branch-middle"></div>
+                  <div class="branch branch-bottom"></div>
+                </div>
+                <div class="tree tree3">
+                  <div class="branch branch-top"></div>
+                  <div class="branch branch-middle"></div>
+                  <div class="branch branch-bottom"></div>
+                </div>
+                <div class="tree tree4">
+                  <div class="branch branch-top"></div>
+                  <div class="branch branch-middle"></div>
+                  <div class="branch branch-bottom"></div>
+                </div>
+                <div class="tree tree5">
+                  <div class="branch branch-top"></div>
+                  <div class="branch branch-middle"></div>
+                  <div class="branch branch-bottom"></div>
+                </div>
+                <div class="tree tree6">
+                  <div class="branch branch-top"></div>
+                  <div class="branch branch-middle"></div>
+                  <div class="branch branch-bottom"></div>
+                </div>
+                <div class="tree tree7">
+                  <div class="branch branch-top"></div>
+                  <div class="branch branch-middle"></div>
+                  <div class="branch branch-bottom"></div>
+                </div>
+              </div>
+              <div class="tent">
+                <div class="roof"></div>
+                <div class="roof-border-left">
+                  <div class="roof-border roof-border1"></div>
+                  <div class="roof-border roof-border2"></div>
+                  <div class="roof-border roof-border3"></div>
+                </div>
+                <div class="entrance">
+                  <div class="door left-door">
+                    <div class="left-door-inner"></div>
+                  </div>
+                  <div class="door right-door">
+                    <div class="right-door-inner"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="floor">
+                <div class="ground ground1"></div>
+                <div class="ground ground2"></div>
+              </div>
+              <div class="fireplace">
+                <div class="support"></div>
+                <div class="support"></div>
+                <div class="bar"></div>
+                <div class="hanger"></div>
+                <div class="smoke"></div>
+                <div class="pan"></div>
+                <div class="fire">
+                  <div class="line line1">
+                    <div class="particle particle1"></div>
+                    <div class="particle particle2"></div>
+                    <div class="particle particle3"></div>
+                    <div class="particle particle4"></div>
+                  </div>
+                  <div class="line line2">
+                    <div class="particle particle1"></div>
+                    <div class="particle particle2"></div>
+                    <div class="particle particle3"></div>
+                    <div class="particle particle4"></div>
+                  </div>
+                  <div class="line line3">
+                    <div class="particle particle1"></div>
+                    <div class="particle particle2"></div>
+                    <div class="particle particle3"></div>
+                    <div class="particle particle4"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="time-wrapper">
+                <div class="time">
+                  <div class="day"></div>
+                  <div class="night">
+                    <div class="moon"></div>
+                    <div class="star star1 star-big"></div>
+                    <div class="star star2 star-big"></div>
+                    <div class="star star3 star-big"></div>
+                    <div class="star star4"></div>
+                    <div class="star star5"></div>
+                    <div class="star star6"></div>
+                    <div class="star star7"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            window.addEventListener('load', function() {
+              const preloader = document.querySelector('.preloader');
+              preloader.classList.add('hidden');
+              document.body.style.overflow = 'auto'; // إعادة السماح بالتمرير بعد إخفاء الـ preloader
+            });
+          </script>
+          
+   
+
+        
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Portfolio</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class='bx bx-home-alt nav__icon'></i>
+                                <span class="nav__name">Home</span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class='bx bx-user nav__icon'></i>
+                                <span class="nav__name">About</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class='bx bx-star nav__icon'></i>
+                                <span class="nav__name">Skills</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#Projects" class="nav__link">
+                                <i class='bx bx-briefcase-alt nav__icon'></i>
+                                <span class="nav__name">Projects</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#Contact" class="nav__link">
+                                <i class='bx bx-message-square-detail nav__icon'></i>
+                                <span class="nav__name">Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav__icons">
+
+
+
+                    <label class="theme-switch" id="theme-switch">
+                        <input type="checkbox" class="theme-switch__checkbox" id="theme-switch-checkbox" checked>
+                        <div class="theme-switch__container" id="switch__container">
+                          <div class="theme-switch__clouds"></div>
+                          <div class="theme-switch__stars-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z" fill="currentColor"></path>
+                            </svg>
+                          </div>
+                          <div class="theme-switch__circle-container">
+                            <div class="theme-switch__sun-moon-container">
+                              <div class="theme-switch__moon">
+                                <div class="theme-switch__spot"></div>
+                                <div class="theme-switch__spot"></div>
+                                <div class="theme-switch__spot"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+
+                </div>
+
+            </nav>
+        </header>
+
+          
+        <main>
+            <!--=============== HOME ===============-->
+            <section class=" section section__height" id="home">
+
+
+
+                
+                <div class="section_Home">
+        
+                        <div class="image-section_home">
+                            <img src="./assets/img/main img.svg">
+                        </div>
+                        <div class="container_home">
+                        <div class="content_home-section_home">
+                        
+                            <div class="content_home">
+                                <h1>Hi, Welcome To Me Portfolio</h1>
+                                <h2>My Name is <span>Osama Mabrouk</span></h2>
+                                <h2>My Nickname is <span>SLASH</span></h2>
+                                <div class="container_home_text">
+                                    <span class="text first-text">I'm a</span>
+                                    <span class="text sec-text">Freelancer</span>
+                                </div>
+                                <p class="paragraph">You Can Scroll To Discover More Things About Me. I Hope To Enjoy</p>
+            
+                            </div>
+                            <div class="social">
+                                <a href="./404 1.html" class="socila"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="socila"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="socila"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <script>
+                    const text = document.querySelector(".sec-text");
+            
+                    const textLoad = () => {
+                        setTimeout(() => {
+                            text.textContent = "Programmer";
+                        }, 0);
+                        setTimeout(() => {
+                            text.textContent = "FullStack";
+                        }, 4000);
+                        setTimeout(() => {
+                            text.textContent = "Freelancer";
+                        }, 8000); //1s = 1000 milliseconds
+                    }
+            
+                    textLoad();
+                    setInterval(textLoad, 12000);
+                </script>
+
+<div class="container_lline bottom">
+    <hr class="custom-line">
+</div>
+
+            </section>
+
+
+
+            <!--=============== ABOUT ===============-->
+            <section class="section"  id="about">
+                <h2 class="section__title">About</h2>
+
+                
+
+
+                
+                <div class="section_About">
+        
+                    <div class="image-section_About">
+                        <img src="./assets/img/slash.png">
+                    </div>
+                    <div class="container_About">
+                    <div class="content_About-section_About">
+                    
+                        <div class="about_text">
+                            <p class="gl">-I'm Osama Mabrouk, an 18-year-old from Alexandria, Egypt, with a deep passion for programming and technology.</p>
+                            <p class="gl1">- I started my journey in the world of programming four years ago and have gained extensive experience in various technical fields.<br> </p>
+                            <p class="gl2">- Additionally, I have created around 85 programming projects, You can find a few of them below.</p>
+                            <p class="gl3">-I'm ready to showcase some of these projects and would be happy to connect with you if you have any inquiries.</p>
+                        </div>
+                       
+                    </div>
+        
+                </div>
+            </div>
+
+
+<br>
+            <div class="container_lline bottom">
+                <hr class="custom-line">
+            </div>
+
+            </section>
+
+
+            <!--=============== SKILLS ===============-->
+            <section class=" section section__height" id="skills">
+                <h2 class="section__title">Skills</h2>
+
+
+                <div class="container_skills">
+                    <div class="skill_box HTML">
+                        <span class="title_skill">HTML <i class="fa-brands fa-html5 icon_skill"></i></span>
+            
+                        <div class="skill_bar html">
+                            <span class="skill_per">
+                                <span class="tooltip">95%</span>
+                            </span>
+                        </div>
+                    </div>
+            
+                    <div class="skill_box CSS">
+                        <span class="title_skill">CSS <i class="fa-brands fa-css3-alt icon_skill"></i></span>
+            
+                        <div class="skill_bar">
+                            <span class="skill_per css">
+                                <span class="tooltip">89%</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="skill_box JavaScript">
+                        <span class="title_skill">JavaScript <i class="fa-brands fa-js icon_skill"></i></span>
+            
+                        <div class="skill_bar">
+                            <span class="skill_per javascript">
+                                <span class="tooltip">65%</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="skill_box PHP">
+                        <span class="title_skill">PHP <i class="fa-brands fa-php icon_skill"></i></span>
+            
+                        <div class="skill_bar">
+                            <span class="skill_per PHP">
+                                <span class="tooltip">88%</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="skill_box MYSQL">
+                        <span class="title_skill">MYSQL <i class="fa-solid fa-database icon_skill"></i></span>
+            
+                        <div class="skill_bar">
+                            <span class="skill_per MYSQL">
+                                <span class="tooltip">77%</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="skill_box Python">
+                        <span class="title_skill">Python <i class="fa-brands fa-python icon_skill"></i></span>
+            
+                        <div class="skill_bar">
+                            <span class="skill_per Python">
+                                <span class="tooltip">40%</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="skill_box PhotoShope">
+                        <span class="title_skill">PhotoShope <i class="fa-regular fa-image icon_skill"></i></span>
+            
+                        <div class="skill_bar">
+                            <span class="skill_per PhotoShope">
+                                <span class="tooltip">88%</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="skill_box Illustrator">
+                        <span class="title_skill">Illustrator <i class="fa-solid fa-pen-nib icon_skill"></i></span>
+            
+                        <div class="skill_bar">
+                            <span class="skill_per Illustrator ">
+                                <span class="tooltip">90%</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="skill_box Word">
+                        <span class="title_skill">Word <i class="fa-regular fa-file-word icon_skill"></i><span>
+            
+                        <div class="skill_bar">
+                            <span class="skill_per Word">
+                                <span class="tooltip">80%</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="skill_box Excel">
+                        <span class="title_skill">Excel <i class="fa-solid fa-file-excel icon_skill"></i><span>
+            
+                        <div class="skill_bar">
+                            <span class="skill_per Excel">
+                                <span class="tooltip">80%</span>
+                            </span>
+                        </div>
+                    </div>
+            
+            
+                </div>
+
+       
+
+
+            </section>
+
+<center>
+<hr style="width: 80%;" class="bottom">
+</center>
+
+<!--=============== Projects ===============-->
+<section class="section Projects_cont" id="Projects">
+    <h2 class="section__title">Projects</h2>
+
+    <div class="projects-container">
+        <a class="project-link pro1" onclick="openModal('modal1')"><p>Age Calculator</p></a>
+        <a class="project-link pro2" onclick="openModal('modal2')"><p>Clock</p></a>
+        <a class="project-link pro3" onclick="openModal('modal3')"><p>Colors Generator</p></a>
+        <a class="project-link pro4" onclick="openModal('modal4')"><p>Currency Converter</p></a>
+        <a class="project-link pro5" onclick="openModal('modal5')"><p>Gradient Generator</p></a>
+        <a class="project-link pro6" onclick="openModal('modal6')"><p>Language Translator</p></a>
+        <a class="project-link pro7" onclick="openModal('modal7')"><p>login Form</p></a>
+        <a class="project-link pro8" onclick="openModal('modal8')"><p>Memory Game</p></a>
+        <a class="project-link pro9" onclick="openModal('modal9')"><p>Morse Code</p></a>
+        <a class="project-link pro1" onclick="openModal('modal10')"><p>Password Generator</p></a>
+        <a class="project-link pro2" onclick="openModal('modal11')"><p>Password Strength Checker</p></a>
+        <a class="project-link pro3" onclick="openModal('modal12')"><p>Text to Speech Converter</p></a>
+        <a class="project-link pro4" onclick="openModal('modal13')"><p>Qr Code Maker</p></a>
+        <a class="project-link pro5" onclick="openModal('modal14')"><p>Rock Paper Scissors</p></a>
+        <a class="project-link pro6" onclick="openModal('modal15')"><p>Tasbeeh</p></a>
+        <a class="project-link pro7" onclick="openModal('modal16')"><p>Tic Tac Toe</p></a>
+        <a class="project-link pro8" onclick="openModal('modal17')"><p>XO Game</p></a>
+        <a class="project-link pro9" onclick="openModal('modal18')"><p>Error 404 page</p></a>
+    </div>
+</section>
+
+<!-- Modals -->
+
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <img src="assets/img/age calc.png" alt="Age Calculator">
+        <p>Age Calculator</p>
+        <a href="./projects/Age Calculator.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <img src="./assets/img/clock.png" alt="Clock">
+        <p>Clock</p>
+        <a href="./projects/Clock.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <img src="./assets/img/Colors Generator.png" alt="colors Generator">
+        <p>colors Generator</p>
+        <a href="./projects/Colors Generator.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <img src="./assets/img/Currency Converter.png" alt="Currency Converter">
+        <p>Currency Converter</p>
+        <a href="./projects/Currency Converter.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal5')">&times;</span>
+        <img src="assets/img/Gradient Generator.png" alt="Gradient Generator">
+        <p>Gradient Generator</p>
+        <a href="./projects/Gradient Generator.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal6')">&times;</span>
+        <img src="assets/img/Language Translator.png" alt="Language Translator">
+        <p>Language Translator</p>
+        <a href="./projects/Language Translator.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal7" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal7')">&times;</span>
+        <img src="assets/img/login.png" alt="login">
+        <p>login Form</p>
+        <a href="./projects/login.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal8" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal8')">&times;</span>
+        <img src="assets/img/Memory Game.png" alt="Memory Game">
+        <p>Memory Game</p>
+        <a href="./projects/Memory Game.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal9" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal9')">&times;</span>
+        <img src="assets/img/Morse Code.png" alt="Morse Code">
+        <p>Morse Code</p>
+        <a href="./projects/Morse Code.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal10" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal10')">&times;</span>
+        <img src="assets/img/Password Generator.png" alt="Password Generator">
+        <p>Password Generator</p>
+        <a href="./projects/Password Generator.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal11" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal11')">&times;</span>
+        <img src="assets/img/Password Strength Checker.png" alt="Password Strength Checker">
+        <p>Password Strength Checker</p>
+        <a href="./projects/Password Strength Checker.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal12" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal12')">&times;</span>
+        <img src="assets/img/Text to Speech Converter.png" alt="Text to Speech Converter">
+        <p>Text to Speech Converter</p>
+        <a href="./projects/Text to Speech Converter.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal13" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal13')">&times;</span>
+        <img src="assets/img/Qr Code Maker.png" alt="Qr Code Maker">
+        <p>Qr Code Maker</p>
+        <a href="./projects/Qr Code maker.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal14" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal14')">&times;</span>
+        <img src="assets/img/Rock Paper Scissors.png" alt="Rock Paper Scissors">
+        <p>Rock Paper Scissors</p>
+        <a href="./projects/Rock Paper Scissors.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal15" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal15')">&times;</span>
+        <img src="assets/img/Tasbeeh.png" alt="Electronic Tasbeeh">
+        <p>Electronic Tasbeeh</p>
+        <a href="./projects/Tasbeeh.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal16" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal16')">&times;</span>
+        <img src="assets/img/Tic Tac Toe.png" alt="Tic Tac Toe">
+        <p>Tic Tac Toe</p>
+        <a href="./projects/Tic Tac Toe.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal17" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal17')">&times;</span>
+        <img src="assets/img/XO Game.png" alt="XO Game">
+        <p>XO Game</p>
+        <a href="./projects/XO Game.html" target="_blank">Try Now</a>
+    </div>
+</div>
+<div id="modal18" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal18')">&times;</span>
+        <img src="assets/img/Error 404.png" alt="Error 404">
+        <p>Error 404</p>
+        <a href="./projects/Error 404.html" target="_blank">Try Now</a>
+    </div>
+</div>
+
+<br><br>
+<br><br>
+<br><br>
+<center>
+        <hr style="width: 80%;" class="bottom">
+
+            <!--=============== Contact ===============-->
+
+<section class=" section  contact" id="Contact">
+    <h2 class="section__title">Contact</h2>
+    <form action="#">
+        <div class="input_box">
+            <div class="input_filed field pro2">
+                <i class="fas fa-user field-icon"></i>
+                <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+                <div class="error-txt ">Full Name Can't Be Blank</div>
+            </div>
+            <div class="input_filed field pro3">
+                <i class="fas fa-envelope field-icon"></i>
+                <input type="text" placeholder="Email Address" id="email" class="item" autocomplete="off">
+                <div class="error-txt">Email Can't Be Blank</div>
+            </div>
+        </div>
+        <div class="input_box">
+            <div class="input_filed field pro2">
+                <i class="fas fa-phone field-icon"></i>
+                <input type="text" placeholder="Phone Number" id="phone" class="item" autocomplete="off">
+                <div class="error-txt">Phone Number Can't Be Blank</div>
+            </div>
+            <div class="input_filed field pro3">
+                <i class="fas fa-book field-icon"></i>
+                <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
+                <div class="error-txt">Subject Can't Be Blank</div>
+            </div>
+        </div>
+        <div class="input-filed field pro1">
+            <i class="fas fa-comment field-icon"></i>
+            <textarea id="message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off"></textarea>
+            <div class="error-txt">Message Can't Be Blank</div>
+        </div>
+        
+        <button class="pro4" type="submit" >Send Message</button>
+    </form>
+
+    <div class="container_lline bottom">
+        <hr class="custom-line">
+    </div>
+
+
+
+
+</section>
+        </center>
+
+        </main>
+                <script>
+const form = document.querySelector('form');
+const fullName = document.getElementById("name");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const subject = document.getElementById("subject");
+const mess = document.getElementById("message");
+
+function sendEmail() {
+    const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${phone.value}<br> Message: ${mess.value}`;
+
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "osamamabrouk015@gmail.com",
+        Password: "2D730029C43137E3429E6B352146AF1A69C1",
+        To: 'osamamabrouk015@gmail.com',
+        From: "osamamabrouk015@gmail.com",
+        Subject: subject.value,
+        Body: bodyMessage
+    }).then(
+        message => {
+            if (message === "OK") {
+                Swal.fire({
+                    title: "Success!",
+                    text: "Message Sent Successfully!",
+                    icon: "success"
+                }).then(() => {
+                    window.location.reload();
+                });
+            } else {
+                Swal.fire({
+                    title: "Error!",
+                    text: "Failed to send message. Please try again later.",
+                    icon: "error"
+                });
+            }
+        }
+    );
+}
+
+function checkInputs() {
+    const items = document.querySelectorAll(".item");
+
+    for (const item of items) {
+        const errorMessage = item.parentElement.querySelector(".error-txt");
+
+        if (item.value.trim() === "") {
+            item.classList.add("error");
+            errorMessage.textContent = "This field cannot be empty.";
+            errorMessage.style.display = "block";
+        } else {
+            item.classList.remove("error");
+            errorMessage.style.display = "none";
+        }
+    }
+
+    checkEmail();
+}
+
+function checkEmail() {
+    const emailRegex = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
+
+    if (!email.value.match(emailRegex)) {
+        email.classList.add("error");
+        email.parentElement.querySelector(".error-txt").textContent = "Enter a valid email address.";
+        email.parentElement.querySelector(".error-txt").style.display = "block";
+    } else {
+        email.classList.remove("error");
+        email.parentElement.querySelector(".error-txt").style.display = "none";
+    }
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    checkInputs();
+
+    // Check if there are any errors before attempting to send the email
+    const errors = document.querySelectorAll(".error");
+    if (errors.length === 0) {
+        sendEmail();
+    } else {
+        Swal.fire({
+            title: "Error!",
+            text: "Please fill in all the required fields correctly.",
+            icon: "error"
+        });
+    }
+});
+
+
+</script>
+
+<footer id="footer">
+
+    <div class="bottom-bar pro4">
+        <p>&copy; 2024 SLASH Portfolio. All rights reserved</p>
+    </div>
+</footer>
+
+<script>
+    ScrollReveal({
+         reset: true,
+         distance: '90px',
+         duration: '2000',
+         delay: 400
+         });
+
+         ScrollReveal().reveal('.about_text,.left', { delay: 500, origin: 'left' });
+         ScrollReveal().reveal('', { delay: 500, origin: 'right' });
+         ScrollReveal().reveal('.bottom,.image-section_About img', { delay: 500, origin: 'bottom' });
+         ScrollReveal().reveal('.section_Home img, .section__title,.top', { delay: 500, origin: 'top' });
+
+         ScrollReveal().reveal('.content_home h1, .content_home h2, .content_home div,.content_home p, .socila, .pro1,.pro5,.pro9', { delay: 200, origin: 'bottom', interval: 200 });
+         ScrollReveal().reveal('.CSS,.PHP, .Python, .Illustrator, .Excel,.pro2,.pro6,.gl,.gl1,.gl2,.gl3 ,.HTML, .JavaScript, .MYSQL, .PhotoShope, .Word,.pro3,.pro7', { delay: 200, origin: 'left', interval: 200 });
+
+         ScrollReveal().reveal('.pro4,.pro8', { delay: 200, origin: 'top', interval: 200 });
+
+</script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
+</html>

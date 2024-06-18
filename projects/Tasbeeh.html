@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Tasbeeh</title>
+<style>
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.counter-container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.display {
+    font-size: 3em;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: #e0e0e0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    font-size: 1em;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#incrementButton {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #28a745;
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#incrementButton:hover {
+    background-color: #218838;
+}
+
+#resetButton {
+    width: 50px;
+    height: 50px;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 50%;
+    margin-top: 10px;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#resetButton:hover {
+    background-color: #c82333;
+}
+
+
+
+</style>
+</head>
+<body>
+    <div class="counter-container">
+        <h1>Electronic Tasbeeh</h1>
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button id="incrementButton">Tasbeeh</button>
+            <button id="resetButton">Clear</button>
+        </div>
+    </div>
+    <script>
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    let count = localStorage.getItem('count') || 0;
+    const display = document.getElementById('display');
+    const incrementButton = document.getElementById('incrementButton');
+    const resetButton = document.getElementById('resetButton');
+
+    display.textContent = count;
+
+    incrementButton.addEventListener('click', () => {
+        count++;
+        display.textContent = count;
+        localStorage.setItem('count', count);
+    });
+
+    resetButton.addEventListener('click', () => {
+        count = 0;
+        display.textContent = count;
+        localStorage.setItem('count', count);
+    });
+});
+
+
+    </script>
+</body>
+</html>

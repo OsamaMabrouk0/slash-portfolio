@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+    <!-- ===== CSS ===== -->
+<style>
+
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root{
+  /*===== Colores =====*/
+  --first-color: #03045e;
+  --first-color-dark: #023e8a;
+  --first-color-light: #A49EAC;
+  --first-color-lighten: #F2F2F2;
+
+  /*===== Font and typography =====*/
+  --body-font: 'Open Sans', sans-serif;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+}
+
+@media screen and (min-width: 768px){
+  :root{
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*===== BASE =====*/
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--first-color-dark);
+
+}
+
+h1{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*===== LOGIN =====*/
+.login{
+  display: grid;
+  grid-template-columns: 100%;
+  height: 100vh;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.login__content{
+  display: grid;
+}
+
+.login__img{
+  justify-self: center;
+}
+
+.login__img img{
+  width: 310px;
+  margin-top: 1.5rem;
+}
+
+.login__forms{
+  position: relative;
+  height: 368px;
+}
+
+.login__register, .login__create, .login__forgot-form, .login__verify, .login__reset-password{
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  background-color: var(--first-color-lighten);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(35,0,77,.2);
+  animation-duration: .4s;
+  animation-name: animate-login;
+}
+
+@keyframes animate-login{
+  0%{
+    transform: scale(1,1);
+  }
+  50%{
+    transform: scale(1.1,1.1);
+  }
+  100%{
+    transform: scale(1,1);
+  }
+}
+
+.login__title{
+  font-size: var(--h1-font-size);
+  margin-bottom: 2rem;
+}
+
+.login__box{
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: .5rem;
+  padding: 1.125rem 1rem;
+  background-color: #FFF;
+  margin-top: 1rem;
+  border-radius: .5rem;
+}
+
+.login__icon{
+  font-size: 1.5rem;
+  color: var(--first-color);
+}
+
+.login__input{
+  border: none;
+  outline: none;
+  font-size: var(--normal-font-size);
+  font-weight: 700;
+  color: var(--first-color-dark);
+}
+
+.login__input::placeholder{
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  color: var(--first-color-light);
+}
+
+.login__forgot{
+  display: block;
+  width: max-content;
+  margin-left: auto;
+  margin-top: .5rem;
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  color: var(--first-color-light);
+}
+
+.login__button{
+  width: 100%;
+  display: block;
+  padding: 1rem;
+  margin: 2rem 0;
+  background-color: var(--first-color);
+  color: #FFF;
+  font-weight: 600;
+  text-align: center;
+  border-radius: .5rem;
+  transition: .3s;
+  box-shadow: none;
+  border: none;
+  
+}
+
+.login__button:hover{
+  background-color: var(--first-color-dark);
+}
+
+.login__account, .login__signin, .login__signup{
+  font-weight: 600;
+  font-size: var(--small-font-size);
+}
+
+.login__account{
+  color: var(--first-color-dark);
+}
+
+.login__signin, .login__signup{
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+.login__social{
+  margin-top: 2rem;
+}
+
+.login__social-icon{
+  font-size: 1.5rem;
+  color: var(--first-color-dark);
+  margin: 0 1.5rem;
+}
+
+/*Show login*/
+.block{
+  display: block;
+}
+
+/*Hidden login*/
+.none{
+  display: none;
+}
+
+/* ===== MEDIA QUERIES =====*/
+@media screen and (min-width: 576px){
+  .login__forms{
+    width: 348px;
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .login{
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .login__content{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    align-items: center;
+    margin-left: 10rem;
+  }
+
+  .login__img{
+    display: flex;
+    width: 600px;
+    height: 588px;
+    background-color: var(--first-color-lighten);
+    border-radius: 1rem;
+    padding-left: 1rem;
+  }
+
+  .login__img img{
+    width: 390px;
+    margin-top: 0;
+  }
+
+  .login__register, .login__create, .login__forgot-form, .login__verify, .login__reset-password{
+    left: -11rem;
+  }
+
+  .login__register, .login__forgot-form, .login__verify, .login__reset-password{
+    bottom: -2rem;
+  }
+
+  .login__create{
+    bottom: -5.5rem;
+  }
+}
+
+.login__eye {
+  position: absolute;
+  right: 25px; /* تحديد المسافة من الحافة اليمنى */
+  font-size: 1.5rem;
+  color: var(--first-color);
+}
+
+
+
+
+</style>
+
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- ===== SWEETALERT2 ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<body>
+    <div class="login">
+        <div class="login__content">
+            <div class="login__img">
+                <img src="./Tablet login-bro.svg" alt="">
+            </div>
+
+            <div class="login__forms">
+                <!-- Login Form -->
+                <form action="" class="login__register" id="login-in">
+                    <h1 class="login__title">Sign In</h1>
+
+                    <div class="login__box">
+                        <i class='bx bx-at login__icon'></i>
+                        <input type="email" placeholder="Email" class="login__input" id="signin-email" required>
+                    </div>
+
+                    <div class="login__box">
+                        <i class='bx bx-lock-alt login__icon'></i>
+                        <input type="password" placeholder="Password" class="login__input" id="signin-password" required>
+                        <i class='bx bx-hide login__eye' id="togglePasswordSignIn"></i>
+                    </div>
+
+                    <a href="#" class="login__forgot">Forgot password?</a>
+                    <button type="submit" class="login__button">Sign In</button>
+
+                    <div>
+                        <span class="login__account">Don't have an Account ?</span>
+                        <span class="login__signin" id="sign-up">Sign Up</span>
+                    </div>
+                </form>
+
+                <!-- Forgot Password Form -->
+                <form action="" class="login__forgot-form none" id="forgot-password">
+                    <h1 class="login__title">Forgot Password</h1>
+                    <div class="login__box">
+                        <i class='bx bx-at login__icon'></i>
+                        <input type="email" placeholder="Email" class="login__input" id="forgot-email" required>
+                    </div>
+                    <button type="submit" class="login__button">Send Code</button>
+
+                    <div>
+                        <span class="login__account">Remembered You Password ?</span>
+                        <span class="login__signin" id="sign-in">Sign In</span>
+                    </div>
+                </form>
+
+                <!-- Verification Code Form -->
+                <form action="" class="login__verify none" id="verify-code">
+                    <h1 class="login__title">Enter Verification Code</h1>
+                    <div class="login__box">
+                        <i class='bx bx-lock-alt login__icon'></i>
+                        <input type="text" placeholder="Verification Code" class="login__input" id="verify-code-input" required>
+                    </div>
+                    <button type="submit" class="login__button">Submit Code</button>
+
+                    <div>
+                        <span class="login__account">Didn't Receive the Code?</span>
+                        <span class="login__signin" id="resend-code">Resend Code</span>
+                    </div>
+                </form>
+
+                <!-- Password Reset Form -->
+                <form action="" class="login__reset-password none" id="reset-password">
+                    <h1 class="login__title">Reset Password</h1>
+                    <div class="login__box">
+                        <i class='bx bx-lock-alt login__icon'></i>
+                        <input type="password" placeholder="New Password" class="login__input" id="new-password" required>
+                        <i class='bx bx-hide login__eye' id="togglePasswordReset1"></i>
+                    </div>
+                    <div class="login__box">
+                        <i class='bx bx-lock-alt login__icon'></i>
+                        <input type="password" placeholder="Confirm New Password" class="login__input" id="confirm-password" required>
+                        <i class='bx bx-hide login__eye' id="togglePasswordReset2"></i>
+                    </div>
+                    <button type="submit" class="login__button">Reset Password</button>
+                </form>
+
+                <!-- Register Form -->
+                <form action="" class="login__create none" id="login-up">
+                    <h1 class="login__title">Create Account</h1>
+
+                    <div class="login__box">
+                        <i class='bx bx-user login__icon'></i>
+                        <input type="text" placeholder="Username" class="login__input" id="signup-username" required>
+                    </div>
+
+                    <div class="login__box">
+                        <i class='bx bx-at login__icon'></i>
+                        <input type="email" placeholder="Email" class="login__input" id="signup-email" required>
+                    </div>
+
+                    <div class="login__box">
+                        <i class='bx bx-lock-alt login__icon'></i>
+                        <input type="password" placeholder="Password" class="login__input" id="signup-password" required>
+                        <i class='bx bx-hide login__eye' id="togglePasswordSignUp"></i>
+                    </div>
+                    <button type="submit" class="login__button">Sign Up</button>
+
+                    <div>
+                        <span class="login__account">Already have an Account ?</span>
+                        <span class="login__signin" id="sign-in">Sign In</span>
+                    </div>
+
+                    <div class="login__social">
+                        <a href="#" class="login__social-icon"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="login__social-icon"><i class='bx bxl-google'></i></a>
+                        <a href="#" class="login__social-icon"><i class='bx bxl-github'></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--===== MAIN JS =====-->
+    <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const signUp = document.getElementById('sign-up');
+    const signIn = document.getElementById('sign-in');
+    const loginIn = document.getElementById('login-in');
+    const loginUp = document.getElementById('login-up');
+    const forgotPasswordLink = document.querySelector('.login__forgot');
+    const forgotPasswordForm = document.getElementById('forgot-password');
+    const verifyCodeForm = document.getElementById('verify-code');
+    const resetPasswordForm = document.getElementById('reset-password');
+
+    signUp.addEventListener('click', () => {
+        loginIn.classList.add('none');
+        loginUp.classList.remove('none');
+    });
+
+    signIn.addEventListener('click', () => {
+        loginUp.classList.add('none');
+        loginIn.classList.remove('none');
+    });
+
+    forgotPasswordLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Hide login forms
+        loginIn.classList.add('none');
+        loginUp.classList.add('none');
+        // Show forgot password form
+        forgotPasswordForm.classList.remove('none');
+    });
+
+    // To add functionality to return back to login forms
+    const returnToLoginLinks = document.querySelectorAll('.login__signin');
+
+    returnToLoginLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Hide forgot password form
+            forgotPasswordForm.classList.add('none');
+            // Hide verification code form
+            verifyCodeForm.classList.add('none');
+            // Hide password reset form
+            resetPasswordForm.classList.add('none');
+            // Show appropriate login form based on the link clicked
+            if (e.target.id === 'sign-in') {
+                loginIn.classList.remove('none');
+                loginUp.classList.add('none');
+            } else if (e.target.id === 'sign-up') {
+                loginUp.classList.remove('none');
+                loginIn.classList.add('none');
+            }
+        });
+    });
+
+    // When "Send Code" button is clicked in the "Forgot Password" form, show the verification code form
+    forgotPasswordForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Hide forgot password form
+        forgotPasswordForm.classList.add('none');
+        // Show verification code form
+        verifyCodeForm.classList.remove('none');
+    });
+
+    // When "Submit Code" button is clicked in the verification code form, show the password reset form
+    verifyCodeForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Hide verification code form
+        verifyCodeForm.classList.add('none');
+        // Show password reset form
+        resetPasswordForm.classList.remove('none');
+    });
+
+    // When "Reset Password" button is clicked in the password reset form, validate the passwords
+    resetPasswordForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const newPassword = document.getElementById('new-password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+        if (newPassword !== confirmPassword) {
+            Swal.fire({
+                title: "Error!",
+                text: "Passwords do not match",
+                icon: "error"
+            });
+        } else if (newPassword.length < 6 || !/\d/.test(newPassword)) {
+            Swal.fire({
+                title: "Error!",
+                text: "Password must be at least 6 characters long and contain at least one number",
+                icon: "error"
+            });
+        } else {
+            // Passwords match and meet requirements, proceed with your action here
+            Swal.fire({
+                title: "Good job!",
+                text: "Password changed successfully!",
+                icon: "success"
+            }).then(() => {
+                // Hide password reset form
+                resetPasswordForm.classList.add('none');
+                // Show login form
+                loginIn.classList.remove('none');
+                loginUp.classList.add('none');
+            });
+        }
+    });
+
+    // Additional validation for email and password in sign-up form
+    loginUp.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('signup-email').value;
+        const password = document.getElementById('signup-password').value;
+        if (email === '') {
+            Swal.fire({
+                title: "Error!",
+                text: "Please enter your email address",
+                icon: "error"
+            });
+        } else if (password.length < 6 || !/\d/.test(password)) {
+            Swal.fire({
+                title: "Error!",
+                text: "Password must be at least 6 characters long and contain at least one number",
+                icon: "error"
+            });
+        } else {
+            // Proceed with sign-up process
+            // Example: You can submit the form here
+            Swal.fire({
+                title: "Success!",
+                text: "Account created successfully!",
+                icon: "success"
+            }).then(() => {
+                // Hide sign-up form
+                loginUp.classList.add('none');
+                // Show login form
+                loginIn.classList.remove('none');
+            });
+        }
+    });
+});
+
+const togglePasswordSignIn = document.getElementById('togglePasswordSignIn');
+const togglePasswordReset1 = document.getElementById('togglePasswordReset1');
+const togglePasswordReset2 = document.getElementById('togglePasswordReset2');
+const togglePasswordSignUp = document.getElementById('togglePasswordSignUp');
+
+togglePasswordSignIn.addEventListener('click', function () {
+    const password = document.getElementById('signin-password');
+    if (password.type === "password") {
+        password.type = "text";
+        togglePasswordSignIn.classList.remove('bx-hide');
+        togglePasswordSignIn.classList.add('bx-show');
+    } else {
+        password.type = "password";
+        togglePasswordSignIn.classList.remove('bx-show');
+        togglePasswordSignIn.classList.add('bx-hide');
+    }
+});
+
+togglePasswordReset1.addEventListener('click', function () {
+    const password = document.getElementById('new-password');
+    if (password.type === "password") {
+        password.type = "text";
+        togglePasswordReset1.classList.remove('bx-hide');
+        togglePasswordReset1.classList.add('bx-show');
+    } else {
+        password.type = "password";
+        togglePasswordReset1.classList.remove('bx-show');
+        togglePasswordReset1.classList.add('bx-hide');
+    }
+});
+
+togglePasswordReset2.addEventListener('click', function () {
+    const password = document.getElementById('confirm-password');
+    if (password.type === "password") {
+        password.type = "text";
+        togglePasswordReset2.classList.remove('bx-hide');
+        togglePasswordReset2.classList.add('bx-show');
+    } else {
+        password.type = "password";
+        togglePasswordReset2.classList.remove('bx-show');
+        togglePasswordReset2.classList.add('bx-hide');
+    }
+});
+
+togglePasswordSignUp.addEventListener('click', function () {
+    const password = document.getElementById('signup-password');
+    if (password.type === "password") {
+        password.type = "text";
+        togglePasswordSignUp.classList.remove('bx-hide');
+        togglePasswordSignUp.classList.add('bx-show');
+    } else {
+        password.type = "password";
+        togglePasswordSignUp.classList.remove('bx-show');
+        togglePasswordSignUp.classList.add('bx-hide');
+    }
+});
+
+
+ // Function to clear form data
+ function clearFormData() {
+    const forms = document.querySelectorAll('.login form');
+    forms.forEach(form => {
+        const formFields = form.querySelectorAll('.login__input');
+        formFields.forEach(field => {
+            field.value = '';
+        });
+    });
+}
+
+// Get interface elements for form switching
+const signUp = document.getElementById('sign-up');
+const signIn = document.getElementById('sign-in');
+const forgotPasswordLink = document.querySelector('.login__forgot');
+
+// Link function to form switch event
+signUp.addEventListener('click', () => {
+    clearFormData();
+});
+
+signIn.addEventListener('click', () => {
+    clearFormData();
+});
+
+forgotPasswordLink.addEventListener('click', () => {
+    clearFormData();
+});
+
+
+    </script>
+
+  
+    
+</body>
+
+</html>
